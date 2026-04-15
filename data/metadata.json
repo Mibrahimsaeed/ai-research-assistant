@@ -1,0 +1,394 @@
+[
+    {
+        "title": "General365: Benchmarking General Reasoning in Large Language Models Across Diverse and Challenging Tasks",
+        "authors": [
+            "Junlin Liu",
+            "Shengnan An",
+            "Shuang Zhou",
+            "Dan Ma",
+            "Shixiong Luo",
+            "Ying Xie",
+            "Yuan Zhang",
+            "Wenling Yuan",
+            "Yifan Zhou",
+            "Xiaoyu Li",
+            "Ziwen Wang",
+            "Xuezhi Cao",
+            "Xunliang Cai"
+        ],
+        "summary": "Contemporary large language models (LLMs) have demonstrated remarkable reasoning capabilities, particularly in specialized domains like mathematics and physics. However, their ability to generalize these reasoning skills to more general and broader contexts--often termed general reasoning--remains under-explored. Unlike domain-specific reasoning, general reasoning relies less on expert knowledge but still presents formidable reasoning challenges, such as complex constraints, nested logical branches, and semantic interference. To address this gap, we introduce General365, a benchmark specifically designed to assess general reasoning in LLMs. By restricting background knowledge to a K-12 level, General365 explicitly decouples reasoning from specialized expertise. The benchmark comprises 365 seed problems and 1,095 variant problems across eight categories, ensuring both high difficulty and diversity. Evaluations across 26 leading LLMs reveal that even the top-performing model achieves only 62.8% accuracy, in stark contrast to the near-perfect performances of LLMs in math and physics benchmarks. These results suggest that the reasoning abilities of current LLMs are heavily domain-dependent, leaving significant room for improvement in broader applications. We envision General365 as a catalyst for advancing LLM reasoning beyond domain-specific tasks toward robust, general-purpose real-world scenarios. Code, Dataset, and Leaderboard: https://general365.github.io",
+        "pdf_path": "data/papers\\2604.11778v1.General365__Benchmarking_General_Reasoning_in_Large_Language_Models_Across_Diverse_and_Challenging_Tasks.pdf",
+        "published": "2026-04-13 17:44:25+00:00",
+        "arxiv_id": "2604.11778v1"
+    },
+    {
+        "title": "Towards Automated Pentesting with Large Language Models",
+        "authors": [
+            "Ricardo Bessa",
+            "Rui Claro",
+            "Jo\u00e3o Trindade",
+            "Jo\u00e3o Louren\u00e7o"
+        ],
+        "summary": "Large Language Models (LLMs) are redefining offensive cybersecurity by allowing the generation of harmful machine code with minimal human intervention. While attackers take advantage of dark LLMs such as XXXGPT and WolfGPT to produce malicious code, ethical hackers can follow similar approaches to automate traditional pentesting workflows. In this work, we present RedShell, a privacy-preserving, hardware-efficient framework that leverages fine-tuned LLMs to assist pentesters in generating offensive PowerShell code targeting Microsoft Windows vulnerabilities. RedShell was trained on a malicious PowerShell dataset from the literature, which we further enhanced with manually curated code samples. Experiments show that our framework achieves over 90% syntactic validity in generated samples and strong semantic alignment with reference pentesting snippets, outperforming state-of-the-art counterparts in distance metrics such as edit distance (above 50% average code similarity). Additionally, functional experiments emphasize the execution reliability of the snippets produced by RedShell in a testing scenario that mirrors real-world settings. This work sheds light on the state-of-the-art research in the field of Generative AI applied to malicious code generation and automated testing, acknowledging the potential benefits that LLMs hold within controlled environments such as pentesting.",
+        "pdf_path": "data/papers\\2604.11772v1.Towards_Automated_Pentesting_with_Large_Language_Models.pdf",
+        "published": "2026-04-13 17:41:51+00:00",
+        "arxiv_id": "2604.11772v1"
+    },
+    {
+        "title": "Predicting User Satisfaction in Online Education Platforms: A Large Language Model Based Multi-Modal Review Mining Framework",
+        "authors": [
+            "Arman Bekov",
+            "Azamat Nurgali"
+        ],
+        "summary": "Online education platforms have experienced explosive growth over the past decade, generating massive volumes of user-generated content in the form of reviews, ratings, and behavioral logs. These heterogeneous signals provide unprecedented opportunities for understanding learner satisfaction, which is a critical determinant of course retention, engagement, and long-term learning outcomes. However, accurately predicting satisfaction remains challenging due to the short length, noise, contextual dependency, and multi-dimensional nature of online reviews.\n  In this paper, we propose a unified \\textbf{Large Language Model (LLM)-based multi-modal framework} for predicting both platform-level and course-level learner satisfaction. The proposed framework integrates three complementary information sources: (1) short-text topic distributions that capture latent thematic structures, (2) contextualized sentiment representations learned from pretrained Transformer-based language models, and (3) behavioral interaction features derived from learner activity logs. These heterogeneous representations are fused within a hybrid regression architecture to produce accurate satisfaction predictions.\n  We conduct extensive experiments on large-scale MOOC review datasets collected from multiple public platforms. The experimental results demonstrate that the proposed LLM-based multi-modal framework consistently outperforms traditional text-only models, shallow sentiment baselines, and single-modality regression approaches. Comprehensive ablation studies further validate the necessity of jointly modeling topic semantics, deep sentiment representations, and behavioral analytics. Our findings highlight the critical role of large-scale contextual language representations in advancing learning analytics and provide actionable insights for platform design, course improvement, and personalized recommendation.",
+        "pdf_path": "data/papers\\2604.11723v1.Predicting_User_Satisfaction_in_Online_Education_Platforms__A_Large_Language_Model_Based_Multi_Modal_Review_Mining_Framework.pdf",
+        "published": "2026-04-13 16:58:02+00:00",
+        "arxiv_id": "2604.11723v1"
+    },
+    {
+        "title": "Legal2LogicICL: Improving Generalization in Transforming Legal Cases to Logical Formulas via Diverse Few-Shot Learning",
+        "authors": [
+            "Jieying Xue",
+            "Phuong Minh Nguyen",
+            "Ha Thanh Nguyen",
+            "May Myo Zin",
+            "Ken Satoh"
+        ],
+        "summary": "This work aims to improve the generalization of logic-based legal reasoning systems by integrating recent advances in NLP with legal-domain adaptive few-shot learning techniques using LLMs. Existing logic-based legal reasoning pipelines typically rely on fine-tuned models to map natural-language legal cases into logical formulas before forwarding them to a symbolic reasoner. However, such approaches are heavily constrained by the scarcity of high-quality annotated training data. To address this limitation, we propose a novel LLM-based legal reasoning framework that enables effective in-context learning through retrieval-augmented generation. Specifically, we introduce Legal2LogicICL, a few-shot retrieval framework that balances diversity and similarity of exemplars at both the latent semantic representation level and the legal text structure level. In addition, our method explicitly accounts for legal structure by mitigating entity-induced retrieval bias in legal texts, where lengthy and highly specific entity mentions often dominate semantic representations and obscure legally meaningful reasoning patterns. Our Legal2LogicICL constructs informative and robust few-shot demonstrations, leading to accurate and stable logical rule generation without requiring additional training. In addition, we construct a new dataset, named Legal2Proleg, which is annotated with alignments between legal cases and PROLEG logical formulas to support the evaluation of legal semantic parsing. Experimental results on both open-source and proprietary LLMs demonstrate that our approach significantly improves accuracy, stability, and generalization in transforming natural-language legal case descriptions into logical representations, highlighting its effectiveness for interpretable and reliable legal reasoning. Our code is available at https://github.com/yingjie7/Legal2LogicICL.",
+        "pdf_path": "data/papers\\2604.11699v1.Legal2LogicICL__Improving_Generalization_in_Transforming_Legal_Cases_to_Logical_Formulas_via_Diverse_Few_Shot_Learning.pdf",
+        "published": "2026-04-13 16:36:48+00:00",
+        "arxiv_id": "2604.11699v1"
+    },
+    {
+        "title": "Please Make it Sound like Human: Encoder-Decoder vs. Decoder-Only Transformers for AI-to-Human Text Style Transfer",
+        "authors": [
+            "Utsav Paneru"
+        ],
+        "summary": "AI-generated text has become common in academic and professional writing, prompting research into detection methods. Less studied is the reverse: systematically rewriting AI-generated prose to read as genuinely human-authored. We build a parallel corpus of 25,140 paired AI-input and human-reference text chunks, identify 11 measurable stylistic markers separating the two registers, and fine-tune three models: BART-base, BART-large, and Mistral-7B-Instruct with QLoRA. BART-large achieves the highest reference similarity -- BERTScore F1 of 0.924, ROUGE-L of 0.566, and chrF++ of 55.92 -- with 17x fewer parameters than Mistral-7B. We show that Mistral-7B's higher marker shift score reflects overshoot rather than accuracy, and argue that shift accuracy is a meaningful blind spot in current style transfer evaluation.",
+        "pdf_path": "data/papers\\2604.11687v1.Please_Make_it_Sound_like_Human__Encoder_Decoder_vs__Decoder_Only_Transformers_for_AI_to_Human_Text_Style_Transfer.pdf",
+        "published": "2026-04-13 16:30:15+00:00",
+        "arxiv_id": "2604.11687v1"
+    },
+    {
+        "title": "Why Do Large Language Models Generate Harmful Content?",
+        "authors": [
+            "Rajesh Ganguli",
+            "Raha Moraffah"
+        ],
+        "summary": "Large Language Models (LLMs) have been shown to generate harmful content. However, the underlying causes of such behavior remain under explored. We propose a causal mediation analysis-based approach to identify the causal factors responsible for harmful generation. Our method performs a multi-granular analysis across model layers, modules (MLP and attention blocks), and individual neurons. Extensive experiments on state-of-the-art LLMs indicate that harmful generation arises in the later layers of the model, results primarily from failures in MLP blocks rather than attention blocks, and is associated with neurons that act as a gating mechanism for harmful generation. The results indicate that the early layers in the model are used for a contextual understanding of harmfulness in a prompt, which is then propagated through the model, to generate harmfulness in the late layers, as well as a signal indicating harmfulness through MLP blocks. This is then further propagated to the last layer of the model, specifically to a sparse set of neurons, which receives the signal and determines the generation of harmful content accordingly.",
+        "pdf_path": "data/papers\\2604.11663v1.Why_Do_Large_Language_Models_Generate_Harmful_Content_.pdf",
+        "published": "2026-04-13 16:11:38+00:00",
+        "arxiv_id": "2604.11663v1"
+    },
+    {
+        "title": "Long-wave infrared Fourier transform spectroscopy with enhanced and scalable sensitivity",
+        "authors": [
+            "Sergey Vasilyev",
+            "Roderik Krebbers",
+            "Dmitrii Konnov",
+            "Mathieu Walsh",
+            "Igor Moskalev",
+            "Mike Mirov",
+            "Andrey Muraviev",
+            "Jerome Genest",
+            "Konstantin Vodopyanov",
+            "Simona M. Cristescu"
+        ],
+        "summary": "We report a broadband long-wave infrared Fourier transform spectrometer with sensitivity exceeding that of previously reported direct-detection implementations. The system combines dual-comb spectroscopy with electro-optic sampling, multi-channel parallel near-infrared detection using InGaAs photodiodes, and real-time GPU-based computational corrections of multiple spectroscopy signals. Detection limits of 0.3 ppb for NH$_{3}$ and 2 ppb for C$_{2}$H$_{4}$ are achieved in 500 s, corresponding to 20x and 40x sensitivity improvements over earlier LWIR demonstrations, while maintaining high 0.0027 cm$^{-1}$ spectral resolution and broad spectral coverage. The architecture supports scalable sensitivity through increased detector count and enables rapid multispecies analysis of complex gas mixtures.",
+        "pdf_path": "data/papers\\2604.11622v1.Long_wave_infrared_Fourier_transform_spectroscopy_with_enhanced_and_scalable_sensitivity.pdf",
+        "published": "2026-04-13 15:28:46+00:00",
+        "arxiv_id": "2604.11622v1"
+    },
+    {
+        "title": "Layerwise Dynamics for In-Context Classification in Transformers",
+        "authors": [
+            "Patrick Lutz",
+            "Themistoklis Haris",
+            "Arjun Chandra",
+            "Aditya Gangrade",
+            "Venkatesh Saligrama"
+        ],
+        "summary": "Transformers can perform in-context classification from a few labeled examples, yet the inference-time algorithm remains opaque. We study multi-class linear classification in the hard no-margin regime and make the computation identifiable by enforcing feature- and label-permutation equivariance at every layer. This enables interpretability while maintaining functional equivalence and yields highly structured weights. From these models we extract an explicit depth-indexed recursion: an end-to-end identified, emergent update rule inside a softmax transformer, to our knowledge the first of its kind. Attention matrices formed from mixed feature-label Gram structure drive coupled updates of training points, labels, and the test probe. The resulting dynamics implement a geometry-driven algorithmic motif, which can provably amplify class separation and yields robust expected class alignment.",
+        "pdf_path": "data/papers\\2604.11613v1.Layerwise_Dynamics_for_In_Context_Classification_in_Transformers.pdf",
+        "published": "2026-04-13 15:20:41+00:00",
+        "arxiv_id": "2604.11613v1"
+    },
+    {
+        "title": "Intersectional Sycophancy: How Perceived User Demographics Shape False Validation in Large Language Models",
+        "authors": [
+            "Benjamin Maltbie",
+            "Shivam Raval"
+        ],
+        "summary": "Large language models exhibit sycophantic tendencies--validating incorrect user beliefs to appear agreeable. We investigate whether this behavior varies systematically with perceived user demographics, testing whether combinations of race, age, gender, and expressed confidence level produce differential false validation rates. Inspired by the legal concept of intersectionality, we conduct 768 multi-turn adversarial conversations using Anthropic's Petri evaluation framework, probing GPT-5-nano and Claude Haiku 4.5 across 128 persona combinations in mathematics, philosophy, and conspiracy theory domains. GPT-5-nano is significantly more sycophantic than Claude Haiku 4.5 overall ($\\bar{x}=2.96$ vs. $1.74$, $p < 10^{-32}$, Wilcoxon signed-rank). For GPT-5-nano, we find that philosophy elicits 41% more sycophancy than mathematics and that Hispanic personas receive the highest sycophancy across races. The worst-scoring persona, a confident, 23-year-old Hispanic woman, averages 5.33/10 on sycophancy. Claude Haiku 4.5 exhibits uniformly low sycophancy with no significant demographic variation. These results demonstrate that sycophancy is not uniformly distributed across users and that safety evaluations should incorporate identity-aware testing.",
+        "pdf_path": "data/papers\\2604.11609v1.Intersectional_Sycophancy__How_Perceived_User_Demographics_Shape_False_Validation_in_Large_Language_Models.pdf",
+        "published": "2026-04-13 15:14:33+00:00",
+        "arxiv_id": "2604.11609v1"
+    },
+    {
+        "title": "NovBench: Evaluating Large Language Models on Academic Paper Novelty Assessment",
+        "authors": [
+            "Wenqing Wu",
+            "Yi Zhao",
+            "Yuzhuo Wang",
+            "Siyou Li",
+            "Juexi Shao",
+            "Yunfei Long",
+            "Chengzhi Zhang"
+        ],
+        "summary": "Novelty is a core requirement in academic publishing and a central focus of peer review, yet the growing volume of submissions has placed increasing pressure on human reviewers. While large language models (LLMs), including those fine-tuned on peer review data, have shown promise in generating review comments, the absence of a dedicated benchmark has limited systematic evaluation of their ability to assess research novelty. To address this gap, we introduce NovBench, the first large-scale benchmark designed to evaluate LLMs' capability to generate novelty evaluations in support of human peer review. NovBench comprises 1,684 paper-review pairs from a leading NLP conference, including novelty descriptions extracted from paper introductions and corresponding expert-written novelty evaluations. We focus on both sources because the introduction provides a standardized and explicit articulation of novelty claims, while expert-written novelty evaluations constitute one of the current gold standards of human judgment. Furthermore, we propose a four-dimensional evaluation framework (including Relevance, Correctness, Coverage, and Clarity) to assess the quality of LLM-generated novelty evaluations. Extensive experiments on both general and specialized LLMs under different prompting strategies reveal that current models exhibit limited understanding of scientific novelty, and that fine--tuned models often suffer from instruction-following deficiencies. These findings underscore the need for targeted fine-tuning strategies that jointly improve novelty comprehension and instruction adherence.",
+        "pdf_path": "data/papers\\2604.11543v1.NovBench__Evaluating_Large_Language_Models_on_Academic_Paper_Novelty_Assessment.pdf",
+        "published": "2026-04-13 14:35:17+00:00",
+        "arxiv_id": "2604.11543v1"
+    },
+    {
+        "title": "METER: Evaluating Multi-Level Contextual Causal Reasoning in Large Language Models",
+        "authors": [
+            "Pengfeng Li",
+            "Chen Huang",
+            "Chaoqun Hao",
+            "Hongyao Chen",
+            "Xiao-Yong Wei",
+            "Wenqiang Lei",
+            "See-Kiong Ng"
+        ],
+        "summary": "Contextual causal reasoning is a critical yet challenging capability for Large Language Models (LLMs). Existing benchmarks, however, often evaluate this skill in fragmented settings, failing to ensure context consistency or cover the full causal hierarchy. To address this, we pioneer METER to systematically benchmark LLMs across all three levels of the causal ladder under a unified context setting. Our extensive evaluation of various LLMs reveals a significant decline in proficiency as tasks ascend the causal hierarchy. To diagnose this degradation, we conduct a deep mechanistic analysis via both error pattern identification and internal information flow tracing. Our analysis reveals two primary failure modes: (1) LLMs are susceptible to distraction by causally irrelevant but factually correct information at lower level of causality; and (2) as tasks ascend the causal hierarchy, faithfulness to the provided context degrades, leading to a reduced performance. We belive our work advances our understanding of the mechanisms behind LLM contextual causal reasoning and establishes a critical foundation for future research. Our code and dataset are available at https://github.com/SCUNLP/METER .",
+        "pdf_path": "data/papers\\2604.11502v1.METER__Evaluating_Multi_Level_Contextual_Causal_Reasoning_in_Large_Language_Models.pdf",
+        "published": "2026-04-13 14:07:11+00:00",
+        "arxiv_id": "2604.11502v1"
+    },
+    {
+        "title": "Winner-Take-All Spiking Transformer for Language Modeling",
+        "authors": [
+            "Chenlin Zhou",
+            "Sihang Guo",
+            "Jiaqi Wang",
+            "Dongyang Ma",
+            "Kaiwei Che",
+            "Baiyu Chen",
+            "Qingyan Meng",
+            "Zhengyu Ma",
+            "Yonghong Tian"
+        ],
+        "summary": "Spiking Transformers, which combine the scalability of Transformers with the sparse, energy-efficient property of Spiking Neural Networks (SNNs), have achieved impressive results in neuromorphic and vision tasks and attracted increasing attention. However, existing directly trained spiking transformers primarily focus on vision tasks. For language modeling with spiking transformer, convergence relies heavily on softmax-based spiking self-attention, which incurs high energy costs and poses challenges for neuromorphic deployment. To address this issue, we introduce Winner-Take-All (WTA) mechanisms into spiking transformers and propose two novel softmax-free, spike-driven self-attention modules: WTA Spiking Self-Attention (WSSA) and Causal WTA Spiking Self-Attention (CWSSA). Based on them, we design WTA-based Encoder-only Spiking Transformer (WE-Spikingformer) for masked language modeling and WTA-based Decoder-only Spiking Transformer (WD-Spikingformer) for causal language modeling, systematically exploring softmax-free, spiking-driven Transformer architectures trained end-to-end for natural language processing tasks. Extensive experiments on 16 datasets spanning natural language understanding, question-answering tasks, and commonsense reasoning tasks validate the effectiveness of our approach and highlight the promise of spiking transformers for general language modeling and energy-efficient artificial intelligence.",
+        "pdf_path": "data/papers\\2604.11321v1.Winner_Take_All_Spiking_Transformer_for_Language_Modeling.pdf",
+        "published": "2026-04-13 11:23:06+00:00",
+        "arxiv_id": "2604.11321v1"
+    },
+    {
+        "title": "Enhancing Multimodal Large Language Models for Ancient Chinese Character Evolution Analysis via Glyph-Driven Fine-Tuning",
+        "authors": [
+            "Rui Song",
+            "Lida Shi",
+            "Ruihua Qi",
+            "Yingji Li",
+            "Hao Xu"
+        ],
+        "summary": "In recent years, rapid advances in Multimodal Large Language Models (MLLMs) have increasingly stimulated research on ancient Chinese scripts. As the evolution of written characters constitutes a fundamental pathway for understanding cultural transformation and historical continuity, how MLLMs can be systematically leveraged to support and advance text evolution analysis remains an open and largely underexplored problem. To bridge this gap, we construct a comprehensive benchmark comprising 11 tasks and over 130,000 instances, specifically designed to evaluate the capability of MLLMs in analyzing the evolution of ancient Chinese scripts. We conduct extensive evaluations across multiple widely used MLLMs and observe that, while existing models demonstrate a limited ability in glyph-level comparison, their performance on core tasks-such as character recognition and evolutionary reasoning-remains substantially constrained. Motivated by these findings, we propose a glyph-driven fine-tuning framework (GEVO) that explicitly encourages models to capture evolutionary consistency in glyph transformations and enhances their understanding of text evolution. Experimental results show that even models at the 2B scale achieve consistent and comprehensive performance improvements across all evaluated tasks. To facilitate future research, we publicly release both the benchmark and the trained models\\footnote{https://github.com/songruiecho/GEVO}.",
+        "pdf_path": "data/papers\\2604.11299v1.Enhancing_Multimodal_Large_Language_Models_for_Ancient_Chinese_Character_Evolution_Analysis_via_Glyph_Driven_Fine_Tuning.pdf",
+        "published": "2026-04-13 11:00:24+00:00",
+        "arxiv_id": "2604.11299v1"
+    },
+    {
+        "title": "Transactional Attention: Semantic Sponsorship for KV-Cache Retention",
+        "authors": [
+            "Abhinaba Basu"
+        ],
+        "summary": "At K=16 tokens (0.4% of a 4K context), every existing KV-cache compression method achieves 0% on credential retrieval. The failure mode is dormant tokens: credentials, API keys, and configuration values that receive near-zero attention but become essential at generation time. Because these tokens lack the statistical signals that eviction policies rely on, no method based on attention scores, reconstruction loss, or learned retention gates retains them. We introduce Transactional Attention (TA), a sponsorship mechanism in which structural anchor patterns (e.g., \"key:\", \"password:\") protect adjacent value-bearing tokens from eviction. TA achieves 100% credential retrieval at K=16 where six baselines (H2O, TOVA, SnapKV, StreamingLLM, PyramidKV, DynamicKV) achieve 0%, and sustains 100% accuracy across 200 function-calling trials. TA-Fast, an attention-free variant, reduces memory overhead by 52% and is compatible with SDPA and FlashAttention. TA is orthogonal to existing compression methods and adds less than 1% latency overhead.",
+        "pdf_path": "data/papers\\2604.11288v1.Transactional_Attention__Semantic_Sponsorship_for_KV_Cache_Retention.pdf",
+        "published": "2026-04-13 10:51:46+00:00",
+        "arxiv_id": "2604.11288v1"
+    },
+    {
+        "title": "Consistency of AI-Generated Exercise Prescriptions: A Repeated Generation Study Using a Large Language Model",
+        "authors": [
+            "Kihyuk Lee"
+        ],
+        "summary": "Background: Large language models (LLMs) have been explored as tools for generating personalized exercise prescriptions, yet the consistency of outputs under identical conditions remains insufficiently examined. Objective: This study evaluated the intra-model consistency of LLM-generated exercise prescriptions using a repeated generation design. Methods: Six clinical scenarios were used to generate exercise prescriptions using Gemini 2.5 Flash (20 outputs per scenario; total n = 120). Consistency was assessed across three dimensions: (1) semantic consistency using SBERT-based cosine similarity, (2) structural consistency based on the FITT principle using an AI-as-a-judge approach, and (3) safety expression consistency, including inclusion rates and sentence-level quantification. Results: Semantic similarity was high across scenarios (mean cosine similarity: 0.879-0.939), with greater consistency in clinically constrained cases. Frequency showed consistent patterns, whereas variability was observed in quantitative components, particularly exercise intensity. Unclassifiable intensity expressions were observed in 10-25% of resistance training outputs. Safety-related expressions were included in 100% of outputs; however, safety sentence counts varied significantly across scenarios (H=86.18, p less than 0.001), with clinical cases generating more safety expressions than healthy adult cases. Conclusions: LLM-generated exercise prescriptions demonstrated high semantic consistency but showed variability in key quantitative components. Reliability depends substantially on prompt structure, and additional structural constraints and expert validation are needed before clinical deployment.",
+        "pdf_path": "data/papers\\2604.11287v1.Consistency_of_AI_Generated_Exercise_Prescriptions__A_Repeated_Generation_Study_Using_a_Large_Language_Model.pdf",
+        "published": "2026-04-13 10:50:44+00:00",
+        "arxiv_id": "2604.11287v1"
+    },
+    {
+        "title": "Empowering Video Translation using Multimodal Large Language Models",
+        "authors": [
+            "Bingzheng QU",
+            "Kehai Chen",
+            "Xuefeng Bai",
+            "Min Zhang"
+        ],
+        "summary": "Recent developments in video translation have further enhanced cross-lingual access to video content, with multimodal large language models (MLLMs) playing an increasingly important supporting role. With strong multimodal understanding, reasoning, and generation capabilities, MLLMs-based video translation systems are overcoming the limitations of traditional cascaded pipelines that separately handle automatic speech recognition, machine translation, text-to-speech and lip synchronization. These MLLM-powered approaches not only achieve competitive or superior translation quality, but also demonstrate stronger robustness in zero-shot settings and multi-speaker scenarios, while jointly modeling semantic fidelity, timing, speaker identity, and emotional consistency. However, despite the rapid progress of MLLMs and extensive surveys on general video-language understanding, a focused and systematic review of how MLLMs empower video translation tasks is still lacking. To fill this gap, we provide the first comprehensive overview of MLLMs-based video translation, organized around a three-role taxonomy: 1) Semantic Reasoner, which characterizes how MLLMs perform video understanding, temporal reasoning, and multimodal fusion; 2) Expressive Performer, which analyzes LLM-driven and LLM-augmented techniques for expressive, controllable speech generation; and 3) Visual Synthesizer, which examines different types of video generators for high-fidelity lip-sync and visual alignment. Finally, we discuss open challenges in video understanding, temporal modeling, and multimodal alignment, and outline promising future research directions for MLLMs-powered video translation.",
+        "pdf_path": "data/papers\\2604.11283v1.Empowering_Video_Translation_using_Multimodal_Large_Language_Models.pdf",
+        "published": "2026-04-13 10:42:31+00:00",
+        "arxiv_id": "2604.11283v1"
+    },
+    {
+        "title": "How Robust Are Large Language Models for Clinical Numeracy? An Empirical Study on Numerical Reasoning Abilities in Clinical Contexts",
+        "authors": [
+            "Minh-Vuong Nguyen",
+            "Fatemeh Shiri",
+            "Zhuang Li",
+            "Karin Verspoor"
+        ],
+        "summary": "Large Language Models (LLMs) are increasingly being explored for clinical question answering and decision support, yet safe deployment critically requires reliable handling of patient measurements in heterogeneous clinical notes. Existing evaluations of LLMs for clinical numerical reasoning provide limited operation-level coverage, restricted primarily to arithmetic computation, and rarely assess the robustness of numerical understanding across clinical note formats. We introduce ClinicNumRobBench, a benchmark of 1,624 context-question instances with ground-truth answers that evaluates four main types of clinical numeracy: value retrieval, arithmetic computation, relational comparison, and aggregation. To stress-test robustness, ClinicNumRobBench presents longitudinal MIMIC-IV vital-sign records in three semantically equivalent representations, including a real-world note-style variant derived from the Open Patients dataset, and instantiates queries using 42 question templates. Experiments on 14 LLMs show that value retrieval is generally strong, with most models exceeding 85% accuracy, while relational comparison and aggregation remain challenging, with some models scoring below 15%. Fine-tuning on medical data can reduce numeracy relative to base models by over 30%, and performance drops under note-style variation indicate LLM sensitivity to format. ClinicNumRobBench offers a rigorous testbed for clinically reliable numerical reasoning. Code and data URL are available on https://github.com/MinhVuong2000/ClinicNumRobBench.",
+        "pdf_path": "data/papers\\2604.11133v1.How_Robust_Are_Large_Language_Models_for_Clinical_Numeracy__An_Empirical_Study_on_Numerical_Reasoning_Abilities_in_Clinical_Contexts.pdf",
+        "published": "2026-04-13 07:44:41+00:00",
+        "arxiv_id": "2604.11133v1"
+    },
+    {
+        "title": "DeCoVec: Building Decoding Space based Task Vector for Large Language Models via In-Context Learning",
+        "authors": [
+            "Feiyang Li",
+            "Yile Wang"
+        ],
+        "summary": "Task vectors, representing directions in model or activation spaces that encode task-specific behaviors, have emerged as a promising tool for steering large language models (LLMs). However, existing approaches typically require fine-tuning or invasive manipulation of internal states, limiting their flexibility and scalability. We propose \\textsc{DeCoVec} (Decoding Space based Task Vector), a training-free and non-invasive framework that constructs task vectors directly in the \\textit{decoding space} by leveraging in-context learning (ICL). Specifically, \\textsc{DeCoVec} captures the task essence as the difference between the output logit distributions of few-shot and zero-shot prompts, then steers generation by injecting this vector into the decoding process. Experiments across seven LLMs (0.5B--9B) on TruthfulQA, Math-500, and AQUA-RAT show that \\textsc{DeCoVec} consistently outperforms standard few-shot baselines, with gains up to +5.50 average accuracy. Further analysis demonstrates that \\textsc{DeCoVec} effectively suppresses generation degeneration and logical flaws while exhibiting strong robustness to demonstration ordering, all without incurring additional input token costs. Our method offers a training-free and non-invasive solution for LLM steering without requiring weight updates or auxiliary models.",
+        "pdf_path": "data/papers\\2604.11129v1.DeCoVec__Building_Decoding_Space_based_Task_Vector_for_Large_Language_Models_via_In_Context_Learning.pdf",
+        "published": "2026-04-13 07:42:54+00:00",
+        "arxiv_id": "2604.11129v1"
+    },
+    {
+        "title": "Generating Hadamard matrices with transformers",
+        "authors": [
+            "Geordie Williamson",
+            "Oded Yacobi",
+            "Paul Zinn-Justin"
+        ],
+        "summary": "We present a new method for constructing Hadamard matrices that combines transformer neural networks with local search in the PatternBoost framework. Our approach is designed for extremely sparse combinatorial search problems and is particularly effective for Hadamard matrices of Goethals--Seidel type, where Fourier methods permit fast scoring and optimisation. For orders between $100$ and $250$, it produces large numbers of inequivalent Hadamard matrices, and in harder cases it succeeds where local search from random initialisation fails. The largest example found by our method has order $244$. In addition to these new constructions, our experiments reveal that the transformer can discover and exploit useful hidden symmetry in the search space.",
+        "pdf_path": "data/papers\\2604.11101v1.Generating_Hadamard_matrices_with_transformers.pdf",
+        "published": "2026-04-13 07:18:49+00:00",
+        "arxiv_id": "2604.11101v1"
+    },
+    {
+        "title": "CausalGaze: Unveiling Hallucinations via Counterfactual Graph Intervention in Large Language Models",
+        "authors": [
+            "Linggang Kong",
+            "Lei Wu",
+            "Yunlong Zhang",
+            "Xiaofeng Zhong",
+            "Zhen Wang",
+            "Yongjie Wang",
+            "Yao Pan"
+        ],
+        "summary": "Despite the groundbreaking advancements made by large language models (LLMs), hallucination remains a critical bottleneck for their deployment in high-stakes domains. Existing classification-based methods mainly rely on static and passive signals from internal states, which often captures the noise and spurious correlations, while overlooking the underlying causal mechanisms. To address this limitation, we shift the paradigm from passive observation to active intervention by introducing CausalGaze, a novel hallucination detection framework based on structural causal models (SCMs). CausalGaze models LLMs' internal states as dynamic causal graphs and employs counterfactual interventions to disentangle causal reasoning paths from incidental noise, thereby enhancing model interpretability. Extensive experiments across four datasets and three widely used LLMs demonstrate the effectiveness of CausalGaze, especially achieving over 5.2\\% improvement in AUROC on the TruthfulQA dataset compared to state-of-the-art baselines.",
+        "pdf_path": "data/papers\\2604.11087v1.CausalGaze__Unveiling_Hallucinations_via_Counterfactual_Graph_Intervention_in_Large_Language_Models.pdf",
+        "published": "2026-04-13 07:09:33+00:00",
+        "arxiv_id": "2604.11087v1"
+    },
+    {
+        "title": "MMR-AD: A Large-Scale Multimodal Dataset for Benchmarking General Anomaly Detection with Multimodal Large Language Models",
+        "authors": [
+            "Xincheng Yao",
+            "Zefeng Qian",
+            "Chao Shi",
+            "Jiayang Song",
+            "Chongyang Zhang"
+        ],
+        "summary": "In the progress of industrial anomaly detection, general anomaly detection (GAD) is an emerging trend and also the ultimate goal. Unlike the conventional single- and multi-class AD, general AD aims to train a general AD model that can directly detect anomalies in diverse novel classes without any retraining or fine-tuning on the target data. Recently, Multimodal Large Language Models (MLLMs) have shown great promise in achieving general anomaly detection due to their revolutionary visual understanding and language reasoning capabilities. However, MLLM's general AD ability remains underexplored due to: (1) MLLMs are pretrained on amounts of data sourced from the Web, these data still have significant gaps with the data in AD scenarios. Moreover, the image-text pairs during pretraining are also not specifically for AD tasks. (2) The current mainstream AD datasets are image-based and not yet suitable for post-training MLLMs. To facilitate MLLM-based general AD research, we present MMR-AD, which is a comprehensive benchmark for both training and evaluating MLLM-based AD models. With MMR-AD, we reveal that the AD performance of current SOTA generalist MLLMs still falls far behind the industrial requirements. Based on MMR-AD, we also propose a baseline model, Anomaly-R1, which is a reasoning-based AD model that learns from the CoT data in MMR-AD and is further enhanced by reinforcement learning. Extensive experiments show that our Anomaly-R1 achieves remarkable improvements over generalist MLLMs in both anomaly detection and localization.",
+        "pdf_path": "data/papers\\2604.10971v1.MMR_AD__A_Large_Scale_Multimodal_Dataset_for_Benchmarking_General_Anomaly_Detection_with_Multimodal_Large_Language_Models.pdf",
+        "published": "2026-04-13 04:14:56+00:00",
+        "arxiv_id": "2604.10971v1"
+    },
+    {
+        "title": "Beyond A Fixed Seal: Adaptive Stealing Watermark in Large Language Models",
+        "authors": [
+            "Shuhao Zhang",
+            "Yuli Chen",
+            "Jiale Han",
+            "Bo Cheng",
+            "Jiabao Ma"
+        ],
+        "summary": "Watermarking provides a critical safeguard for large language model (LLM) services by facilitating the detection of LLM-generated text. Correspondingly, stealing watermark algorithms (SWAs) derive watermark information from watermarked texts generated by victim LLMs to craft highly targeted adversarial attacks, which compromise the reliability of watermarks. Existing SWAs rely on fixed strategies, overlooking the non-uniform distribution of stolen watermark information and the dynamic nature of real-world LLM generation processes. To address these limitations, we propose Adaptive Stealing (AS), a novel SWA featuring enhanced design flexibility through Position-Based Seal Construction and Adaptive Selection modules. AS operates by defining multiple attack perspectives derived from distinct activation states of contextually ordered tokens. During attack execution, AS dynamically selects the optimal perspective based on watermark compatibility, generation priority, and dynamic generation relevance. Our experiments demonstrate that AS significantly increases steal efficiency against target watermarks under identical experimental conditions. These findings highlight the need for more robust LLM watermarks to withstand potential attacks. We release our code to the community for future research\\footnote{https://github.com/DrankXs/AdaptiveStealingWatermark}.",
+        "pdf_path": "data/papers\\2604.10893v1.Beyond_A_Fixed_Seal__Adaptive_Stealing_Watermark_in_Large_Language_Models.pdf",
+        "published": "2026-04-13 01:46:51+00:00",
+        "arxiv_id": "2604.10893v1"
+    },
+    {
+        "title": "AOP-Smart: A RAG-Enhanced Large Language Model Framework for Adverse Outcome Pathway Analysis",
+        "authors": [
+            "Qinjiang Niu",
+            "Lu Yan"
+        ],
+        "summary": "Adverse Outcome Pathways (AOPs) are an important knowledge framework in toxicological research and risk assessment. In recent years, large language models (LLMs) have gradually been applied to AOP-related question answering and mechanistic reasoning tasks. However, due to the existence of the hallucination problem, that is, the model may generate content that is inconsistent with facts or lacks evidence, their reliability is still limited. To address this issue, this study proposes an AOP-oriented Retrieval-Augmented Generation (RAG) framework, AOP-Smart. Based on the official XML data from AOP-Wiki, this method uses Key Events (KEs), Key Event Relationships (KERs), and specific AOP information to retrieve relevant knowledge for user questions, thereby improving the reliability of the generated results of large language models. To evaluate the effectiveness of the proposed method, this study constructed a test set containing 20 AOP-related question answering tasks, covering KE identification, upstream and downstream KE retrieval, and complex AOP retrieval tasks. Experiments were conducted on three mainstream large language models, Gemini, DeepSeek, and ChatGPT, and comparative tests were performed under two settings: without RAG and with RAG. The experimental results show that, without using RAG, the accuracies of GPT, DeepSeek, and Gemini were 15.0\\%, 35.0\\%, and 20.0\\%, respectively; after using RAG, their accuracies increased to 95.0\\%, 100.0\\%, and 95.0\\%, respectively. The results indicate that AOP-Smart can significantly alleviate the hallucination problem of large language models in AOP knowledge tasks, and greatly improve the accuracy and consistency of their answers.",
+        "pdf_path": "data/papers\\2604.10874v1.AOP_Smart__A_RAG_Enhanced_Large_Language_Model_Framework_for_Adverse_Outcome_Pathway_Analysis.pdf",
+        "published": "2026-04-13 00:49:37+00:00",
+        "arxiv_id": "2604.10874v1"
+    },
+    {
+        "title": "Transformers Learn Latent Mixture Models In-Context via Mirror Descent",
+        "authors": [
+            "Francesco D'Angelo",
+            "Nicolas Flammarion"
+        ],
+        "summary": "Sequence modelling requires determining which past tokens are causally relevant from the context and their importance: a process inherent to the attention layers in transformers, yet whose underlying learned mechanisms remain poorly understood. In this work, we formalize the task of estimating token importance as an in-context learning problem by introducing a framework based on Mixture of Transition Distributions, where a latent variable determines the influence of past tokens on the next. The distribution over this latent variable is parameterized by unobserved mixture weights that transformers must learn in-context. We demonstrate that transformers can implement Mirror Descent to learn these weights from the context. Specifically, we give an explicit construction of a three-layer transformer that exactly implements one step of Mirror Descent and prove that the resulting estimator is a first-order approximation of the Bayes-optimal predictor. Corroborating our construction and its learnability via gradient descent, we empirically show that transformers trained from scratch learn solutions consistent with our theory: their predictive distributions, attention patterns, and learned transition matrix closely match the construction, while deeper models achieve performance comparable to multi-step Mirror Descent.",
+        "pdf_path": "data/papers\\2604.10848v1.Transformers_Learn_Latent_Mixture_Models_In_Context_via_Mirror_Descent.pdf",
+        "published": "2026-04-12 22:45:43+00:00",
+        "arxiv_id": "2604.10848v1"
+    },
+    {
+        "title": "CheeseBench: Evaluating Large Language Models on Rodent Behavioral Neuroscience Paradigms",
+        "authors": [
+            "Zacharie Bugaud"
+        ],
+        "summary": "We introduce CheeseBench, a benchmark that evaluates large language models (LLMs) on nine classical behavioral neuroscience paradigms (Morris water maze, Barnes maze, T-maze, radial arm maze, star maze, operant chamber, shuttle box, conditioned place preference, and delayed non-match to sample), spanning six cognitive dimensions. Each task is grounded in peer-reviewed rodent protocols with approximate animal baselines. The agent receives a unified system prompt with no task-specific instructions and must discover goals purely from ASCII text observations and reward signals, much like a rodent placed into an unfamiliar apparatus. We evaluate six open-weight LLMs (3B to 72B parameters) on text-based ASCII renderings and compare against both a random baseline and a graph-based reinforcement learning agent. Our best model (Qwen2.5-VL-7B) reaches 52.6% average success on ASCII input, compared to 32.1% for random agents and 78.9% for approximate rodent baselines. We find that (1) scaling beyond 7B yields diminishing returns, (2) longer context history degrades performance, (3) chain-of-thought prompting hurts rather than helps, and (4) a vision-language architecture provides an advantage at 7B but hurts at 32B. Because the same model's performance ranges from 20% to 57% depending on interface parameters alone, these results characterize the agent-plus-interface system, not the model in isolation. Under this unified zero-shot ASCII protocol, current open-weight LLM agents remain well below approximate rodent reference values, particularly on tasks requiring spatial navigation and within-trial state tracking.",
+        "pdf_path": "data/papers\\2604.10825v1.CheeseBench__Evaluating_Large_Language_Models_on_Rodent_Behavioral_Neuroscience_Paradigms.pdf",
+        "published": "2026-04-12 21:37:26+00:00",
+        "arxiv_id": "2604.10825v1"
+    },
+    {
+        "title": "Uncertainty-Guided Attention and Entropy-Weighted Loss for Precise Plant Seedling Segmentation",
+        "authors": [
+            "Mohamed Ehab",
+            "Ali Hamdi"
+        ],
+        "summary": "Plant seedling segmentation supports automated phenotyping in precision agriculture. Standard segmentation models face difficulties due to intricate background images and fine structures in leaves. We introduce UGDA-Net (Uncertainty-Guided Dual Attention Network with Entropy-Weighted Loss and Deep Supervision). Three novel components make up UGDA-Net. The first component is Uncertainty-Guided Dual Attention (UGDA). UGDA uses channel variance to modulate feature maps. The second component is an entropy-weighted hybrid loss function. This loss function focuses on high-uncertainty boundary pixels. The third component employs deep supervision for intermediate encoder layers. We performed a comprehensive systematic ablation study. This study focuses on two widely-used architectures, U-Net and LinkNet. It analyzes five incremental configurations: Baseline, Loss-only, Attention-only, Deep Supervision, and UGDA-Net. We trained UGDA-net using a high-resolution plant seedling image dataset containing 432 images. We demonstrate improved segmentation performance and accuracy. With an increase in Dice coefficient of 9.3% above baseline. LinkNet's variance is 13.2% above baseline. Overlays that are qualitative in nature show the reduced false positives at the leaf boundary. Uncertainty heatmaps are consistent with the complex morphology. UGDA-Net aids in the segmentation of delicate structures in plants and provides a high-def solution. The results showed that uncertainty-guided attention and uncertainty-weighted loss are two complementing systems.",
+        "pdf_path": "data/papers\\2604.10823v1.Uncertainty_Guided_Attention_and_Entropy_Weighted_Loss_for_Precise_Plant_Seedling_Segmentation.pdf",
+        "published": "2026-04-12 21:26:17+00:00",
+        "arxiv_id": "2604.10823v1"
+    },
+    {
+        "title": "Position-Agnostic Pre-Projection for Transformer Attention: Nonlinear Feature Construction and Content Skip Before Q/K/V",
+        "authors": [
+            "Chirag Shinde"
+        ],
+        "summary": "We propose two complementary modifications to transformer attention blocks. First, a non-linear pre-projection MLP is inserted between layer norm and Q/K/V projections, constructing richer features in a position-agnostic manner before any positional encoding is applied. Second, a content skip connection routes the pre-projection's features around the attention mechanism, allowing content information to bypass position-aware attention where beneficial. In frozen-probe experiments on Pythia-160M and 410M, the combined approach achieves the strongest results across methods: +40.6% LAMBADA accuracy and -39% perplexity at 160M scale. Learned skip connection weights reveal a consistent pattern across model sizes: later transformer layers activate the content bypass more strongly than earlier layers, suggesting that deeper layers benefit from content information that does not pass through positional attention. All modifications add no K/V cache overhead.",
+        "pdf_path": "data/papers\\2604.10791v1.Position_Agnostic_Pre_Projection_for_Transformer_Attention__Nonlinear_Feature_Construction_and_Content_Skip_Before_Q_K_V.pdf",
+        "published": "2026-04-12 19:44:00+00:00",
+        "arxiv_id": "2604.10791v1"
+    },
+    {
+        "title": "TInR: Exploring Tool-Internalized Reasoning in Large Language Models",
+        "authors": [
+            "Qiancheng Xu",
+            "Yongqi Li",
+            "Fan Liu",
+            "Hongru Wang",
+            "Min Yang",
+            "Wenjie Li"
+        ],
+        "summary": "Tool-Integrated Reasoning (TIR) has emerged as a promising direction by extending Large Language Models' (LLMs) capabilities with external tools during reasoning. Existing TIR methods typically rely on external tool documentation during reasoning. However, this leads to tool mastery difficulty, tool size constraints, and inference inefficiency. To mitigate these issues, we explore Tool-Internalized Reasoning (TInR), aiming at facilitating reasoning with tool knowledge internalized into LLMs. Achieving this goal presents notable requirements, including tool internalization and tool-reasoning coordination. To address them, we propose TInR-U, a tool-internalized reasoning framework for unified reasoning and tool usage. TInR-U is trained through a three-phase pipeline: 1) tool internalization with a bidirectional knowledge alignment strategy; 2) supervised fine-tuning warm-up using high-quality reasoning annotations, and 3) reinforcement learning with TInR-specific rewards. We comprehensively evaluate our method across in-domain and out-of-domain settings. Experiment results show that TInR-U achieves superior performance in both settings, highlighting its effectiveness and efficiency.",
+        "pdf_path": "data/papers\\2604.10788v1.TInR__Exploring_Tool_Internalized_Reasoning_in_Large_Language_Models.pdf",
+        "published": "2026-04-12 19:38:19+00:00",
+        "arxiv_id": "2604.10788v1"
+    },
+    {
+        "title": "Generating Multiple-Choice Knowledge Questions with Interpretable Difficulty Estimation using Knowledge Graphs and Large Language Models",
+        "authors": [
+            "Mehmet Can \u015eakiro\u011flu",
+            "H. Altay G\u00fcvenir",
+            "Kamer Kaya"
+        ],
+        "summary": "Generating multiple-choice questions (MCQs) with difficulty estimation remains challenging in automated MCQ-generation systems used in adaptive, AI-assisted education. This study proposes a novel methodology for generating MCQs with difficulty estimation from the input documents by utilizing knowledge graphs (KGs) and large language models (LLMs). Our approach uses an LLM to construct a KG from input documents, from which MCQs are then systematically generated. Each MCQ is generated by selecting a node from the KG as the key, sampling a related triple or quintuple -- optionally augmented with an extra triple -- and prompting an LLM to generate a corresponding stem from these graph components. Distractors are then selected from the KG. For each MCQ, nine difficulty signals are computed and combined into a unified difficulty score using a data-driven approach. Experimental results demonstrate that our method generates high-quality MCQs whose difficulty estimation is interpretable and aligns with human perceptions. Our approach improves automated MCQ generation by integrating structured knowledge representations with LLMs and a data-driven difficulty estimation model.",
+        "pdf_path": "data/papers\\2604.10748v1.Generating_Multiple_Choice_Knowledge_Questions_with_Interpretable_Difficulty_Estimation_using_Knowledge_Graphs_and_Large_Language_Models.pdf",
+        "published": "2026-04-12 17:42:24+00:00",
+        "arxiv_id": "2604.10748v1"
+    },
+    {
+        "title": "INCRT: An Incremental Transformer That Determines Its Own Architecture",
+        "authors": [
+            "Giansalvo Cirrincione"
+        ],
+        "summary": "Transformer architectures are designed by trial and error: the number of attention heads, the depth, and the head size are fixed before training begins, with no mathematical principle to guide the choice. The result is systematic structural redundancy -- between half and four-fifths of all heads in a trained model can be removed without measurable loss -- because the architecture allocates capacity without reference to the actual requirements of the task.This paper introduces INCRT (Incremental Transformer), an architecture that determines its own structure during training. Starting from a single head, INCRT adds one attention head at a time whenever its current configuration is provably insufficient, and prunes heads that have become redundant. Each growth decision is driven by a single, online-computable geometric quantity derived from the task's directional structure, requiring no separate validation phase and no hand-tuned schedule.\n  Two theorems form the theoretical backbone. The first (homeostatic convergence) establishes that the system always reaches a finite stopping configuration that is simultaneously minimal (no redundant heads) and sufficient (no uncaptured directional energy above the threshold). The second (compressed-sensing analogy) provides a geometric upper bound on the number of heads that this configuration can contain, as a function of the spectral complexity of the task.\n  Experiments on SARS-CoV-2 variant classification and SST-2 sentiment analysis confirm both results: the predicted and observed head counts agree within 12% across all benchmarks, and the final architectures match or exceed BERT-base on distribution-specific tasks while using between three and seven times fewer parameters and no pre-training.",
+        "pdf_path": "data/papers\\2604.10703v1.INCRT__An_Incremental_Transformer_That_Determines_Its_Own_Architecture.pdf",
+        "published": "2026-04-12 15:56:47+00:00",
+        "arxiv_id": "2604.10703v1"
+    }
+]
