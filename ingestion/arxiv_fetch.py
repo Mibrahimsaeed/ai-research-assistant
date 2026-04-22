@@ -2,6 +2,8 @@ import arxiv
 import os
 import json
 import time
+import uuid
+from state_manager import set_status, STATUS
 
 SAVE_DIR = "data/papers"
 METADATA_FILE = "data/metadata.json"
@@ -27,14 +29,18 @@ def fetch_papers(query="(ti:transformer OR ti:attention OR ti:\"large language m
             print(f"Downloading: {result.title}")
 
             pdf_path = result.download_pdf(dirpath=SAVE_DIR)
+            paper_id = str(uuid.uuid4())
 
             paper_data = {
+                "paper_id": paper_id,
                 "title": result.title,
                 "authors": [str(a) for a in result.authors],
                 "summary": result.summary,
                 "pdf_path": pdf_path,
                 "published": str(result.published),
-                "arxiv_id": result.get_short_id()
+                "arxiv_id": result.get_short_id(),
+                "source": "arxiv",
+                "status": STATUS["UPLOADED"]
             }
 
             papers_metadata.append(paper_data)

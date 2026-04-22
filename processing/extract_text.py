@@ -2,7 +2,7 @@ import fitz
 import os
 import json
 import re
-
+from state_manager import set_status, STATUS
 PDF_DIR = "data/papers"
 METADATA_FILE = "data/metadata.json"
 OUTPUT_FILE = "data/clean_papers.json"
@@ -72,9 +72,14 @@ def process_papers():
         metadata = json.load(f)
 
     processed = []
+    
 
     for paper in metadata:
+        if paper.get("status") == STATUS["CLEANED"]:
+            continue
+            
         pdf_path = paper["pdf_path"]
+        paper_id = paper["paper_id"]
 
         if not os.path.exists(pdf_path):
             continue
@@ -84,18 +89,28 @@ def process_papers():
         raw_text = extract_pdf_text(pdf_path)
         cleaned = clean_text(raw_text)
         sections = extract_sections(cleaned)
-
         processed.append({
-            "title": paper["title"],
+            "paper_id": paper_id,
+            "title": paper.get("title"),
             "clean_text": cleaned,
-            "sections": sections
+            "sections": sections,
+            "source": paper.get("source", "unknown"),
+            "pdf_path": pdf_path,
+      
+
         })
+
+        # Update status in metadata
+        metadata = set_status(metadata, paper_id, STATUS["CLEANED"])
 
     with open(OUTPUT_FILE, "w") as f:
         json.dump(processed, f, indent=2)
 
-    print("✅ Cleaning complete!")
+    # Save updated metadata
+    with open(METADATA_FILE, "w") as f:
+        json.dump(metadata, f, indent=4)
 
+    print("✅ Cleaning complete!")
 
 if __name__ == "__main__":
     process_papers()

@@ -7,7 +7,7 @@ import os
 import sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-from rag_engine.llm_client import ask_llm  # ✅ NEW (central LLM handler)
+from core.rag_engine.llm_client import ask_llm  # ✅ NEW (central LLM handler)
 
 load_dotenv()
 
